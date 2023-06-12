@@ -23,9 +23,11 @@ struct LandmarkRow: View {
             
             Spacer()
             
-            Image(systemName: "star.fill")
-                .foregroundColor(.yellow)
-                .frame(width: 50, height: 50)
+            if isFavorite{
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
+            
         }
         .padding()
     }

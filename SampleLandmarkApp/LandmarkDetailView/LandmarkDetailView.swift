@@ -9,8 +9,12 @@ import SwiftUI
 import MapKit
 
 struct LandmarkDetailView: View {
+    @EnvironmentObject var modelData: ModelData
     
     let landmark: LandmarkModel
+    var landmarkIndex: Int{
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id }) ?? 0
+    }
     
     var body: some View {
         
@@ -23,15 +27,18 @@ struct LandmarkDetailView: View {
             
             Spacer()
             
-            ContentView(placeName: landmark.name, subTitle: landmark.park, country: landmark.state, description: landmark.description)
+            ContentView(placeName: landmark.name, subTitle: landmark.park, country: landmark.state, description: landmark.description, favoriteFlg: $modelData.landmarks[landmarkIndex].isFavorite)
         }
+        .navigationTitle(landmark.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct LandmarkDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let models: [LandmarkModel] = JsonUtil.loadJson(fileName: "landmarkData")
+        let models: [LandmarkModel] = ModelData().landmarks
         
         LandmarkDetailView(landmark: models[0])
+            .environmentObject(ModelData())
     }
 }

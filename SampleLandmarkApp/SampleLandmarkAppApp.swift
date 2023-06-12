@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct SampleLandmarkAppApp: App {
+    @StateObject private var modelData = ModelData()
+    
     var body: some Scene {
         WindowGroup {
             LandmarkListView()
+                .environmentObject(ModelData())
         }
     }
 }

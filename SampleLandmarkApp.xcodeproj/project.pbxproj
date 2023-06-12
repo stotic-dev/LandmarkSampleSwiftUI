@@ -23,6 +23,7 @@
 		BC3A011F2A35F72B0031DC28 /* MarkerPlace.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3A011E2A35F72B0031DC28 /* MarkerPlace.swift */; };
 		BC3A01222A3601180031DC28 /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3A01212A3601180031DC28 /* LandmarkListView.swift */; };
 		BC3A01242A36017E0031DC28 /* LandmarkRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3A01232A36017E0031DC28 /* LandmarkRow.swift */; };
+		BC3A01262A367E540031DC28 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3A01252A367E540031DC28 /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		BC3A011E2A35F72B0031DC28 /* MarkerPlace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerPlace.swift; sourceTree = "<group>"; };
 		BC3A01212A3601180031DC28 /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
 		BC3A01232A36017E0031DC28 /* LandmarkRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkRow.swift; sourceTree = "<group>"; };
+		BC3A01252A367E540031DC28 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				BC3A01192A35BF8C0031DC28 /* LandmarModel.swift */,
 				BC3A011E2A35F72B0031DC28 /* MarkerPlace.swift */,
+				BC3A01252A367E540031DC28 /* ModelData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				BC3A01172A35BF250031DC28 /* MapView.swift in Sources */,
 				BC3A01102A35BAE80031DC28 /* LandmarkDetailView.swift in Sources */,
 				BC3A01122A35BBC30031DC28 /* LandmarkImageView.swift in Sources */,
+				BC3A01262A367E540031DC28 /* ModelData.swift in Sources */,
 				BC3A01222A3601180031DC28 /* LandmarkListView.swift in Sources */,
 				BC3A01242A36017E0031DC28 /* LandmarkRow.swift in Sources */,
 				BC3A011A2A35BF8C0031DC28 /* LandmarModel.swift in Sources */,

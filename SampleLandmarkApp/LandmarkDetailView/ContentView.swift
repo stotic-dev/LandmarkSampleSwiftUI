@@ -14,6 +14,8 @@ struct ContentView: View {
     let country: String
     let description: String
     
+    @Binding var favoriteFlg: Bool
+    
     var body: some View {
         VStack {
             HStack{
@@ -21,6 +23,11 @@ struct ContentView: View {
                     .frame(alignment: .leading)
                     .font(.title)
                 Spacer()
+                Image(systemName: "star.fill")
+                    .foregroundColor(favoriteFlg ? .yellow : .gray)
+                    .onTapGesture {
+                        favoriteFlg.toggle()
+                    }
             }
             
             HStack {
@@ -47,10 +54,16 @@ struct ContentView: View {
         }
         .padding()
     }
+    
+    private func updateLandmarkModel(){
+        
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
+    @State static var favoriteFlg = false
+    
     static var previews: some View {
-        ContentView(placeName: "Place Name", subTitle: "sub title name", country: "Country", description: "asdsfesefsfesfsefsefsefsefseffdfefsfefsefsefsefsefsefsefsefsefsefsefsefsefsefsefsefse")
+        ContentView(placeName: "Place Name", subTitle: "sub title name", country: "Country", description: "asdsfesefsfesfsefsefsefsefseffdfefsfefsefsefsefsefsefsefsefsefsefsefsefsefsefsefsefse", favoriteFlg: $favoriteFlg)
     }
 }

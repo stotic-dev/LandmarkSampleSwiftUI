@@ -7,6 +7,7 @@
 
 import Foundation
 import MapKit
+import Combine
 
 struct LandmarkModel:Codable, Identifiable {
     
@@ -16,7 +17,7 @@ struct LandmarkModel:Codable, Identifiable {
     let city: String
     let state: String
     let isFeatured: Bool
-    let isFavorite: Bool
+    var isFavorite: Bool
     let park: String
     let description: String
     let imageName: String
